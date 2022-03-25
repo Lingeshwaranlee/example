@@ -10,7 +10,7 @@ export default function App() {
   const handleFilter=(event)=>{
     const searchWord = event.target.value;
     const newFilter= JSONDATA.filter((value)=>{
-      return value.first_name.toLowerCase().includes(searchWord.toLowerCase());
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
     });
     if(searchWord ===""){
       setsearch([]);
@@ -33,7 +33,7 @@ export default function App() {
       {search.slice(0,15).map((val,key)=>{
         return(
           <div className='appuser'>
-            <p>{val.first_name}</p>
+            <p>{val.name}</p>
             </div>
             
         )
